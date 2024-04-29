@@ -16,23 +16,23 @@ void display() {
   int choice, x;
 
   client client1;
-  //=> File to store transaction info
+  // File to store transaction info
   fstream file;
-  //=> File to read the last account balance
+  // File to read the last account balance
   fstream file2;
 
-  //=> Transaction
+  // Transaction
   file.open("transaction.xls", ios::app);
 
-  //=> Balance
+  // Balance
   file2.open("balance.txt", ios::in);
 
-  //=> Stores the last balance to x
+  // Stores the last balance to x
   file2 >> x;
   
   client1.initialAmount = x;
 
-  //=> First line for the transaction
+  // First line for the transaction
   file << "Account balance: $" << client1.initialAmount << endl;
 
   file2.close();
